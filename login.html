@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+	<div>
+		<h1>Projects</h1>
+		<p>We have over <span>20,910</span> people currently working on projects <span>Join Us</span></p>
+		<h3>Log in</h3>
+	</div>
+	<form method="post" action="#.php" id="response">
+			<ul>
+				<li>
+					<label for="Uname">Username</label>
+					<input type="text" name="Uname" id="Uname" placeholder="Username.." required>
+				</li>
+				<li>
+					<label for="Pword">Password</label>
+					<input type="Password" name="Pword" id="Pword" placeholder="Password.." minlength="8" required>
+				</li>
+				<li>
+					<input type="submit" name="submit" value="Login" onclick="myForm()">
+				</li>
+				<li>
+					<input type="checkbox" name="checkbox" checked="checked">Remember me
+					<a href="#"> Forget Password?</a>
+				</li>
+			</ul>
+		</form>
+	<div>
+		   <p>I do not have an account <a href="signup.html">Sign Up</a></p>
+    </div>
+    <footer>
+	 	© Copyright Mehn. All Rights Reserved <br>
+	 	Designed by <span>Jito</span>
+	 </footer>
+	<script>
+          function myForm() {
+			var uName = document.getElementById("Uname").value;
+			var pWord = document.getElementById("Pword").value; 
+            var text;
+            if (uName == '' && pWord == ''){
+            	alert("Kindly Input Your Login Details")
+            }else if (pWord.length < 8) {
+				if (pWord.length == 0) {
+				alert('Password is required to Login!')
+				} else{
+					alert('Password must contain 8 characters!')
+				}
+	        }else{
+            	text = "<p>Welcome User " + uName + "!</p>";
+            	document.getElementById("response").innerHTML = text;
+            }    
+          }
+		</script>
+
+</body>
+</html>

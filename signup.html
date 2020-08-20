@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+	<div>
+		<h1>Projects</h1>
+		<p>We have over <span>20,910</span> people currently working on projects <span>Join Us</span></p>
+		<h3>Sign Up</h3>
+	</div>
+
+	<form method="post" action="#.php"  id="response">
+			<ul>
+				<li>
+					<label for="Email">Email</label>
+					<input type="text" name="Email" id="Email" placeholder="Email.." required>
+				</li>
+				<li>
+					<label for="Uname">Username</label>
+					<input type="text" name="Uname" id="Uname" placeholder="Username.." required>
+				</li>
+				<li>
+					<label for="Pword">Password</label>
+					<input type="Password" name="Pword" id="Pword" placeholder="Password.." minlength="8" required>
+				</li>
+				<li>
+					<label>Confirm Password</label>
+					<input type="Password" name="Cpword" id="Cpword" placeholder="Confirm Password.." minlength="8" required>
+				</li>
+				<li>
+					<input type="submit" name="submit" value="Sign up" onclick="myForm()">
+				</li>
+				<li>
+					<input type="checkbox" name="checkbox" checked="checked">Remember me
+					<a href="#"> Forget Password?</a>
+				</li>
+			</ul>
+		</form>
+		<div>
+	 <p>I already have an account <a href="login.html">Login</a></p>
+	 </div>
+	 <footer>
+	 	© Copyright Mehn. All Rights Reserved <br>
+	 	Designed by <span>Jito</span>
+	 </footer>
+
+		<script>
+          function myForm() {
+			var uName, pWord, eMail, cPword, text;
+			eMail = document.getElementById("Email").value;
+			uName = document.getElementById("Uname").value;
+			pWord = document.getElementById("Pword").value;
+			cPword = document.getElementById("Cpword").value; 
+			if (uName == '' && eMail == '' && pWord == '' && cPword == '') {
+              alert("Kindly Input Your Login Details")
+            } else if (eMail.length == 0) {
+				alert('Email is required!')
+			} else if (uName.length == 0) {
+				alert('Username is required!')
+			} else if (pWord.length < 8) {
+				if (pWord.length == 0) {
+				alert('Password is required!')
+				} else{
+					alert('Password must contain 8 characters!')
+				}
+			} else if (cPword.length == 0) {
+				alert('Please confirm your password!')
+			} else if (pWord !== cPword) {
+            	alert('Password do not match!')
+            } else{
+            	text = "<p>Registration successful user " + uName + "!</p>";
+            	  document.getElementById("response").innerHTML = text;
+            }
+          }
+		</script>
+
+	<!-- <script>
+          function myForm() {
+          	var eMail = document.getElementById("Email").value;
+			var uName = document.getElementById("Uname").value;
+			var pWord = document.getElementById("Pword").value; 
+			var cPword = document.getElementById("Cpword").value;
+            var text;
+            if (uName == '' || eMail == '' || pWord == '' || cPword == ''){
+            	alert("Kindly Input Your Login Details")
+            } else{
+            	text = "<p>Registration successful user " + uName + "!</p>"
+            	document.getElementById("response").innerHTML = text;
+            }
+            
+          }
+		</script> -->
+
+</body>
+</html>
+
+
+<!-- <script>
+          function myForm() {
+			var uName, pWord, text;
+			uName = document.getElementById("Uname").value;
+			pWord = document.getElementById("Pword").value;         
+            if (uName === "david" && pWord === "james200") {
+            	text = "Welcome User " + uName + ".";
+            } else if (uName == " " || uName == "" || pWord == " " || pWord == "") {
+            	alert("Kindly Input Your Login Details")
+            } else{
+            	text = "Sorry Login Details Do Not Match Existing Records.";
+            }
+            document.getElementById("response").innerHTML = text;
+            finally {
+            	document.getElementById("response").innerHTML = '';
+            }
+          }
+		</script> -->
+
+		 <!-- <script>    	
+    	function myForm() {
+    		var uName = document.getElementById("Uname").value;
+    		var pWord = document.getElementById("Pword").value;
+    		var text;
+    		if (uName === "danieljames" && pWord === 123456789) {
+    			text = "Welcome User Daniel";
+    		} else if(uName == "undefined" || pWord == "undefined") {
+    			alert("Kindly input login details")
+    		} else{
+    			text = "Sorry login details don't match existing records";
+    		}
+    		document.getElementByid('response').innerHTML = text;
+    		// finally {
+    		// 	text =  "";
+    		// 	document.getElementByid('response').innerHTML = text;
+    		// }
+    	} 
+    </script> -->
+
+
+<!-- //Side Work 
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrow Function</h2>
+
+<p>This example shows that if you have only one parameter in an Arrow Function, you can skip the parentheses.</p>
+
+<input type = "text" id = "flower"> </br>
+
+<button onclick = "myFunction()" style = "margin-top: 10px;">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+	"use strict"
+  var x = "Hello";
+  document.getElementById("demo").innerHTML = x + " World";
+  
+  function myFunction() {
+  if (document.getElementById("flower").value == "" | " "){
+  return alert("Error");
+  } else{
+  var y = x + " " + document.getElementById("flower").value + "!";
+  }
+  document.getElementById("demo").innerHTML = y;
+  throw document.getElementById("flower").value = "";
+  }
+
+  //         let outputStrings = []
+ // for (let i = 0, n = inputValues.length; i < n; ++i) {
+ //   outputStrings.push(String(inputValues[i]));
+ // }	
+</script>
+
+</body>
+</html> -->
+
+
